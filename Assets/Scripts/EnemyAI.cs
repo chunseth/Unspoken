@@ -262,6 +262,13 @@ public class EnemyAI : MonoBehaviour
     {
         if (currentPath.Count == 0) return;
 
+        // Don't move if being knocked back
+        EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
+        if (enemyHealth != null && enemyHealth.IsBeingKnockedBack)
+        {
+            return;
+        }
+
         // Stop movement if multiplier is zero
         if (Mathf.Approximately(movementMultiplier, 0f))
         {
@@ -281,6 +288,13 @@ public class EnemyAI : MonoBehaviour
 
     private void MaintainShootingDistance()
     {
+        // Don't move if being knocked back
+        EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
+        if (enemyHealth != null && enemyHealth.IsBeingKnockedBack)
+        {
+            return;
+        }
+
         // Don't adjust position if movement is disabled
         if (Mathf.Approximately(movementMultiplier, 0f))
         {

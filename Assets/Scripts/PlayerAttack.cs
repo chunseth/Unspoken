@@ -329,11 +329,24 @@ public class PlayerAttack : MonoBehaviour
         {
             if (hit.collider != null && hit.collider.gameObject != gameObject)
             {
-                IDamageable damageable = hit.collider.GetComponent<IDamageable>();
-                if (damageable != null)
+                // Try to get EnemyHealth component for knockback
+                EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+                if (enemyHealth != null)
                 {
+                    // Calculate knockback direction from player to enemy
+                    Vector2 knockbackDirection = (hit.collider.transform.position - transform.position).normalized;
                     // Optional: Make dash attacks deal more damage
-                    damageable.TakeDamage(attackDamage * 2);
+                    enemyHealth.TakeDamage(attackDamage * 2, 0f, false, knockbackDirection);
+                }
+                else
+                {
+                    // Fallback to interface for other damageable objects
+                    IDamageable damageable = hit.collider.GetComponent<IDamageable>();
+                    if (damageable != null)
+                    {
+                        // Optional: Make dash attacks deal more damage
+                        damageable.TakeDamage(attackDamage * 2);
+                    }
                 }
             }
         }
@@ -415,10 +428,22 @@ public class PlayerAttack : MonoBehaviour
             {
                 if (hit.collider != null && hit.collider.gameObject != gameObject)
                 {
-                    IDamageable damageable = hit.collider.GetComponent<IDamageable>();
-                    if (damageable != null)
+                    // Try to get EnemyHealth component for knockback
+                    EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
+                    if (enemyHealth != null)
                     {
-                        damageable.TakeDamage(attackDamage);
+                        // Calculate knockback direction from player to enemy
+                        Vector2 knockbackDirection = (hit.collider.transform.position - transform.position).normalized;
+                        enemyHealth.TakeDamage(attackDamage, 0f, false, knockbackDirection);
+                    }
+                    else
+                    {
+                        // Fallback to interface for other damageable objects
+                        IDamageable damageable = hit.collider.GetComponent<IDamageable>();
+                        if (damageable != null)
+                        {
+                            damageable.TakeDamage(attackDamage);
+                        }
                     }
                 }
             }

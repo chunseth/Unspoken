@@ -60,10 +60,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Users/sethchun/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="/Users/sethchun/PatchItUp/Library/PackageCache/com.unity.collab-proxy@2.8.2/Lib/Editor/unityplastic.dll" />
-    <Analyzer Include="/Users/sethchun/PatchItUp/Library/PackageCache/com.unity.collab-proxy@2.8.2/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll" />
-    <Analyzer Include="/Users/sethchun/PatchItUp/Library/PackageCache/com.unity.collab-proxy@2.8.2/Lib/Editor/log4netPlastic.dll" />
-    <Analyzer Include="/Users/sethchun/PatchItUp/Library/PackageCache/com.unity.collab-proxy@2.8.2/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -1069,12 +1065,12 @@
       <HintPath>Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">

@@ -229,6 +229,9 @@ MonoBehaviour:
   critFlashColor: {r: 1, g: 0.5, b: 0, a: 1}
   flashDuration: 0.1
   deathEffectPrefab: {fileID: 0}
+  knockbackForce: 8
+  knockbackDuration: 0.2
+  canBeKnockedBack: 1
   onDamaged:
     m_PersistentCalls:
       m_Calls: []

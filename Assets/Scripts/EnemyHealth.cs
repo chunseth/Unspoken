@@ -57,6 +57,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         get { return enemyType; }
     }
     
+    public bool IsBeingKnockedBack {
+        get { return isBeingKnockedBack; }
+    }
+    
     private bool isDead = false;
     private bool isInvulnerable = false;
     private bool isBeingKnockedBack = false;
