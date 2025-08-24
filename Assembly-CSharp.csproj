@@ -64,22 +64,39 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.44f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/UILineRenderer.cs" />
-    <Compile Include="Assets/Scripts/DungeonGenerator.cs" />
-    <Compile Include="Assets/Scripts/MinimapManager.cs" />
-    <Compile Include="Assets/Scripts/CameraFollow2D.cs" />
-    <Compile Include="Assets/Scripts/EnemyShooter.cs" />
-    <Compile Include="Assets/Scripts/GameOverManager.cs" />
-    <Compile Include="Assets/Scripts/SpellGridDragController.cs" />
-    <Compile Include="Assets/Scripts/EnemyHealth.cs" />
-    <Compile Include="Assets/Scripts/EnemyAI.cs" />
-    <Compile Include="Assets/Scripts/PathCreatorBeam.cs" />
-    <Compile Include="Assets/Scripts/PlayerAttack.cs" />
-    <Compile Include="Assets/Scripts/EnemyProjectile.cs" />
-    <Compile Include="Assets/Scripts/PlayerController.cs" />
-    <Compile Include="Assets/Scripts/PlayerStats.cs" />
-    <Compile Include="Assets/Scripts/CrackedWall.cs" />
-    <Compile Include="Assets/Scripts/ISpecialAbility.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/UILineRenderer.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/CrackedWall3LineDrawer.cs" />
+    <Compile Include="Assets/Scripts/Enemy/BossHealthBar.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyProjectile.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyAI.cs" />
+    <Compile Include="Assets/Scripts/Enemy/RoyalSlime.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyShooter.cs" />
+    <Compile Include="Assets/Scripts/Spawn/CrackedWall3.cs" />
+    <Compile Include="Assets/Scripts/Player/PathCreatorBeam.cs" />
+    <Compile Include="Assets/Scripts/Dungeon/DungeonGenerator.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyHealth.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/HintManager.cs" />
+    <Compile Include="Assets/Scripts/Utility/PuzzleManager.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/SpellBeamGridController.cs" />
+    <Compile Include="Assets/Scripts/Enemy/BossRoomDetector.cs" />
+    <Compile Include="Assets/Scripts/Player/ISpecialAbility.cs" />
+    <Compile Include="Assets/Scripts/Spawn/CrackedWall4.cs" />
+    <Compile Include="Assets/Scripts/Spawn/SpawnIndicator.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/SpellGridDragController.cs" />
+    <Compile Include="Assets/Scripts/Player/HealthBar.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/CarryableObject.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerAttack.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/Puzzle2Hint.cs" />
+    <Compile Include="Assets/Scripts/Enemy/CrownProjectileDamage.cs" />
+    <Compile Include="Assets/Scripts/Map/MinimapManager.cs" />
+    <Compile Include="Assets/Scripts/Spawn/CrackedWall2.cs" />
+    <Compile Include="Assets/Scripts/Utility/GameOverManager.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/Puzzle1Hint.cs" />
+    <Compile Include="Assets/Scripts/Spawn/CrackedWall.cs" />
+    <Compile Include="Assets/Scripts/Utility/CameraFollow2D.cs" />
+    <Compile Include="Assets/Scripts/Spawn/Hole.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -443,26 +460,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.44f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.44f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.44f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.44f1/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.GradleProject">
-      <HintPath>/Applications/Unity/Hub/Editor/2022.3.44f1/PlaybackEngines/AndroidPlayer/Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

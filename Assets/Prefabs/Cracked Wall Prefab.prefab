@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5083297015088389860}
   - component: {fileID: 8514487259290579230}
-  - component: {fileID: 7742038064220299181}
   - component: {fileID: 5756816474547945964}
+  - component: {fileID: 6974133411736296280}
+  - component: {fileID: -5698196057440094499}
   m_Layer: 6
   m_Name: Cracked Wall Prefab
   m_TagString: Wall
@@ -86,31 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7742038064220299181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680186208675534290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5bdc842ad44b4c598338668f23c4029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleUIPanel: {fileID: 0}
-  backgroundImage: {fileID: 0}
-  backButton: {fileID: 0}
-  spellGridController: {fileID: 0}
-  interactionDistance: 2
-  correctSpellPattern: 036
-  player: {fileID: 0}
-  solvedWallSprite: {fileID: 21300000, guid: 7e005d69951414921821d9225c294b0f, type: 3}
-  solveEffect: {fileID: 6082928177018388965, guid: beb63621e6acf4c35894ff172da67306, type: 3}
-  enemyPrefab: {fileID: 7332013450332523361, guid: 15c54e24015434bd5a0088722ef8d488, type: 3}
-  spawnDistance: 20
-  spawnInterval: 5
-  maxEnemies: 10
 --- !u!61 &5756816474547945964
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,3 +132,79 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6974133411736296280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680186208675534290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e868166c4fb435eba2a1d48ef4f688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnIconPrefab: {fileID: 0}
+  indicatorDuration: 0.5
+  trailDuration: 1
+  trailSegments: 10
+  indicatorColor: {r: 1, g: 0, b: 0, a: 1}
+  trailColor: {r: 1, g: 0, b: 0, a: 0.5}
+  travelSpeed: 5
+  useTravelAnimation: 1
+  scaleSpeed: 2
+  rotationSpeed: 90
+  pulseIntensity: 0.2
+  pulseSpeed: 3
+  trailFadeSpeed: 2
+  trailScaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &-5698196057440094499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680186208675534290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5bdc842ad44b4c598338668f23c4029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleUIPanel: {fileID: 0}
+  backgroundImage: {fileID: 0}
+  backButton: {fileID: 0}
+  spellGridController: {fileID: 0}
+  interactionDistance: 2
+  correctSpellPattern: 64705
+  player: {fileID: 0}
+  solvedWallSprite: {fileID: 21300000, guid: 7e005d69951414921821d9225c294b0f, type: 3}
+  solveEffect: {fileID: 6082928177018388965, guid: beb63621e6acf4c35894ff172da67306, type: 3}
+  enemyPrefab: {fileID: 7332013450332523361, guid: 15c54e24015434bd5a0088722ef8d488, type: 3}
+  spawnDistance: 10
+  spawnInterval: 5
+  maxEnemies: 10
+  spawnIndicatorDuration: 2
+  showSpawnIndicators: 1
